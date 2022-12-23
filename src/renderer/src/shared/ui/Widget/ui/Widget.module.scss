@@ -1,0 +1,21 @@
+.Widget {
+  margin: 6px 0;
+  height: fit-content;
+  box-shadow: 0 6px 20px rgb(0 16 61 / 7%);
+  background: #fff;
+  border-radius: 12px;
+}
+
+.title {
+  width: 100%;
+  padding: 5px;
+  border-radius: 12px 12px 0 0 ;
+  background-color: #22578a;
+  color: #fff;
+  text-align: center;
+}
+
+.content {
+  padding: 7px 10px;
+  overflow-y: auto;
+}

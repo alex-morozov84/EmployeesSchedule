@@ -1,0 +1,11 @@
+.List {
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.deleteIcon {
+  transition: all 0.3s ease;
+  &:hover {
+    color: red
+  }
+}
