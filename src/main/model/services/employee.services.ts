@@ -1,6 +1,6 @@
 import { dataSource } from '../../config/db'
 import { Employee } from '../entities/employee.entity'
-import { ChangeEmployeeDTO, EmployeeDTO } from '../controllers/employee.controller'
+import { EmployeeDTO, UpdateEmployeeDTO } from '../controllers/employee.controller'
 
 const employeeRepository = dataSource.getRepository(Employee)
 
@@ -15,7 +15,7 @@ export const getEmployees = async () => {
 
 export const addEmployee = async (employee: EmployeeDTO) => {
   try {
-    const newEmployee = await employeeRepository.create(employee)
+    const newEmployee = await employeeRepository.create({ ...employee, timeOffset: 0 })
     await employeeRepository.save(newEmployee)
     return newEmployee
   } catch (e) {
@@ -40,14 +40,15 @@ export const deleteEmployee = async (id: number) => {
   }
 }
 
-export const changeEmployee = async (changeEmployeeData: ChangeEmployeeDTO) => {
+export const updateEmployee = async (updateEmployeeData: UpdateEmployeeDTO) => {
+  const { id, ...restData } = updateEmployeeData
   try {
-    const employee = await employeeRepository.findOne({ where: { id: changeEmployeeData.id } })
+    const employee = await employeeRepository.findOne({ where: { id } })
     if (employee) {
-      await employeeRepository.update(changeEmployeeData.id, { name: changeEmployeeData.name })
-      return { message: `Данные сотрудника ${employee.name} изменены` }
+      await employeeRepository.update(updateEmployeeData.id, restData)
+      return updateEmployeeData
     } else {
-      console.log(`Сотрудник с id ${changeEmployeeData.id} не найден`)
+      console.log(`Сотрудник с id ${id} не найден`)
       return
     }
   } catch (e) {

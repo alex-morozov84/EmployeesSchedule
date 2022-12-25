@@ -1,3 +1,10 @@
+import { Layout } from '@renderer/shared/ui/Layout'
+import { SetOverwork } from '@renderer/features/SetOverwork'
+
 export const HoursPage = () => {
-  return <div>Часы</div>
+  return (
+    <Layout title="Часы">
+      <SetOverwork />
+    </Layout>
+  )
 }

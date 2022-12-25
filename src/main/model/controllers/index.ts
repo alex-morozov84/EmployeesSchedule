@@ -1,9 +1,11 @@
-import { getUsers } from './user.controller'
 import { employeeController } from './employee.controller'
+import { overworkController } from './overwork.controller'
+import { workdayController } from './workday.controller'
 
 const setControllers = () => {
-  getUsers()
   employeeController()
+  overworkController()
+  workdayController()
 }
 
 export { setControllers }

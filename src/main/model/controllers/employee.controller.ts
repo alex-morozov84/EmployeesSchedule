@@ -1,7 +1,7 @@
 import { ipcMain } from 'electron'
 import {
   addEmployee,
-  changeEmployee,
+  updateEmployee,
   deleteEmployee,
   getEmployees
 } from '../services/employee.services'
@@ -10,9 +10,10 @@ export interface EmployeeDTO {
   name: string
 }
 
-export interface ChangeEmployeeDTO {
+export interface UpdateEmployeeDTO {
   id: number
-  name: string
+  name?: string
+  timeOffset?: number
 }
 
 export const employeeController = () => {
@@ -28,7 +29,7 @@ export const employeeController = () => {
     return await deleteEmployee(id)
   })
 
-  ipcMain.handle('changeEmployee', async (_, changeEmployeeData: ChangeEmployeeDTO) => {
-    return await changeEmployee(changeEmployeeData)
+  ipcMain.handle('updateEmployee', async (_, updateEmployeeData: UpdateEmployeeDTO) => {
+    return await updateEmployee(updateEmployeeData)
   })
 }

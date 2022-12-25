@@ -1,12 +1,13 @@
 import { DataSource } from 'typeorm'
-import { Post } from '../model/entities/post.entity'
 import { Employee } from '../model/entities/employee.entity'
+import { Overwork } from '../model/entities/overwork.entity'
+import { Workday } from '../model/entities/workday.entity'
 
 export const dataSource = new DataSource({
   type: 'sqlite',
   database: 'employees_schedule.sql',
   synchronize: true,
-  entities: [Post, Employee]
+  entities: [Employee, Overwork, Workday]
 })
 
 export const connectToDb = async () => {

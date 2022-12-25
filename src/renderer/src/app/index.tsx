@@ -6,6 +6,7 @@ import { ErrorBoundary } from '@renderer/app/providers/ErrorBoundary'
 import { StoreProvider } from '@renderer/app/providers/StoreProvider'
 import { ConfigProvider as AntDConfigProvider } from 'antd'
 import ruRU from 'antd/lib/locale/ru_RU'
+import 'dayjs/locale/ru'
 
 const container = document.getElementById('root')
 

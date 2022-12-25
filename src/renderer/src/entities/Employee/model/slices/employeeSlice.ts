@@ -4,6 +4,7 @@ import { buildSlice } from '@renderer/shared/store'
 import { fetchEmployees } from '../services/fetchEmployees/fetchEmployess'
 import { addEmployee } from '../services/addEmployee/addEmployee'
 import { deleteEmployee } from '../services/deleteEmployee/deleteEmployee'
+import { updateEmployee } from '../services/updateEmployee/updateEmployee'
 
 const initialState: EmployeeSchema = {
   employees: [],
@@ -53,6 +54,24 @@ export const employeeSlice = buildSlice({
       state.isLoading = false
     })
     builder.addCase(deleteEmployee.rejected, (state, action) => {
+      state.error = action.payload
+      state.isLoading = false
+    })
+    builder.addCase(updateEmployee.pending, (state) => {
+      state.error = undefined
+      state.isLoading = true
+    })
+    builder.addCase(updateEmployee.fulfilled, (state, action) => {
+      const updatedEmployeeData = action.payload
+      state.employees = state.employees.map((employee) => {
+        if (employee.id === updatedEmployeeData.id) {
+          return updatedEmployeeData
+        }
+        return employee
+      })
+      state.isLoading = false
+    })
+    builder.addCase(updateEmployee.rejected, (state, action) => {
       state.error = action.payload
       state.isLoading = false
     })

@@ -6,6 +6,10 @@
 .deleteIcon {
   transition: all 0.3s ease;
   &:hover {
-    color: red
+    color: red;
   }
+}
+
+.item {
+  cursor: pointer;
 }

@@ -5,64 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4187502-7018-44c5-98ed-172b600af810" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/config/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/controllers/employee.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/controllers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/controllers/user.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/entities/employee.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/entities/post.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/services/employee.services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/services/user.services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/router/config/routeConfig.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/router/ui/AppRouter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/selectors/getEmployees/getEmployees.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/addEmployee/addEmployee.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/deleteEmployee/deleteEmployee.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/fetchEmployees/fetchEmployess.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/slices/employeeSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/types/employee.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/AddEmployee/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/AddEmployee/ui/AddEmployee.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeesList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeesList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/EmployeesPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/EmployeesPage/ui/EmployeesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/HoursPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/HoursPage/ui/HoursPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/MainPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/MainPage/ui/MainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/WorkDayPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/pages/WorkDayPage/ui/WorkDayPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/const/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/types/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/ui/AppLink.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/ui/AppLink.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/ui/Layout.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/ui/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/ui/Widget.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/ui/Widget.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/model/selectors/getSidebarItems.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/model/types/sidebar.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/ui/Menu/Menu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/controllers/overwork.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/controllers/workday.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/entities/overwork.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/entities/workday.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/services/overwork.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/services/workday.services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/updateEmployee/updateEmployee.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Overwork/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Overwork/model/selectors/getOverwork/getOverwork.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Overwork/model/services/fetchOverwork/fetchOverwork.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Overwork/model/services/setOverwork/setOverwork.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Overwork/model/slices/overworkSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Overwork/model/types/overwork.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Workday/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Workday/model/selectors/getWorkday.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Workday/model/services/fetchWorkday/fetchWorkday.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Workday/model/services/setWorkday/setWorkday.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Workday/model/slices/workdaySlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/entities/Workday/model/types/workday.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/ChangeEmployeeData/ChangeEmployeeData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeeForm/EmployeeFrom.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/SetOverwork/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/SetOverwork/ui/SetOverwork/SetOverwork.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/ShowWorkday/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/ShowWorkday/ui/Calendar/Calendar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/ShowWorkday/ui/Calendar/Calendar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/ShowWorkday/ui/ShowWorkday/ShowWorkday.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/renderer/src/features/ShowWorkday/ui/WorkdayTable/WorkdayTable.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/notarize.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/notarize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-app-update.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dev-app-update.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electron-builder.yml" beforeDir="false" afterPath="$PROJECT_DIR$/electron-builder.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/electron.vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/electron.vite.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employees_schedule.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employees_schedule.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/config/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/db.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/typeorm.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/controllers/employee.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/controllers/employee.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/controllers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/controllers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/controllers/user.controller.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/entities/employee.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/entities/employee.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/entities/post.entity.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/services/employee.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/model/services/employee.services.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/services/user.services.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preload/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/preload/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preload/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/preload/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/index.tsx" afterDir="false" />
@@ -73,19 +68,59 @@
       <change beforePath="$PROJECT_DIR$/src/renderer/src/app/providers/StoreProvider/config/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/StoreProvider/config/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/app/providers/StoreProvider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/StoreProvider/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/app/providers/StoreProvider/ui/StoreProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/StoreProvider/ui/StoreProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/app/providers/router/config/routeConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/router/config/routeConfig.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/app/providers/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/app/providers/router/ui/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/providers/router/ui/AppRouter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/app/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/types/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/selectors/getEmployees/getEmployees.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/selectors/getEmployees/getEmployees.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/addEmployee/addEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/addEmployee/addEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/deleteEmployee/deleteEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/deleteEmployee/deleteEmployee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/fetchEmployees/fetchEmployess.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/services/fetchEmployees/fetchEmployess.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/slices/employeeSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/slices/employeeSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/types/employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/Employee/model/types/employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/features/AddEmployee/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/features/AddEmployee/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/features/AddEmployee/ui/AddEmployee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/features/AddEmployee/ui/AddEmployee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeesList.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeesList/EmployeesList.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/features/EmployeesList/ui/EmployeesList/EmployeesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/EmployeesPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/EmployeesPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/EmployeesPage/ui/EmployeesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/EmployeesPage/ui/EmployeesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/HoursPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/HoursPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/HoursPage/ui/HoursPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/HoursPage/ui/HoursPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/MainPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/MainPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/MainPage/ui/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/MainPage/ui/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/WorkDayPage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/WorkDayPage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/pages/WorkDayPage/ui/WorkDayPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/pages/WorkDayPage/ui/WorkDayPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/api/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/const/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/const/router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/lib/classNames/classNames.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/lib/classNames/classNames.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/store/buildSelector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/store/buildSelector.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/store/buildSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/store/buildSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/types/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/types/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/ui/AppLink.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/ui/AppLink.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/ui/AppLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/AppLink/ui/AppLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Button/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Button/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Button/ui/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Button/ui/Button.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Button/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Button/ui/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/ui/Layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/ui/Layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/ui/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Layout/ui/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/ui/Widget.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/ui/Widget.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/ui/Widget.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/shared/ui/Widget/ui/Widget.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/PageError/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/PageError/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/PageError/ui/PageError.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/PageError/ui/PageError.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/PageError/ui/PageError.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/PageError/ui/PageError.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.node.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/model/selectors/getSidebarItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/model/selectors/getSidebarItems.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/model/types/sidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/model/types/sidebar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/ui/Menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/ui/Menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,34 +140,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Programming/projects/electron-vite/build",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettier.import.notification.dismissed": "true",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Programming\\projects\\electron-vite\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Programming\\projects\\electron-vite\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programming/projects/EmployeesSchedule/node_modules/prettier&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Programming\\projects\\EmployeesSchedule\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Programming\\projects\\EmployeesSchedule\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programming\projects\electron-vite\build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\projects\EmployeesSchedule\src\renderer\src\entities\Overwork\model\services\fetchOverwork" />
+      <recent name="D:\Programming\projects\EmployeesSchedule\src\renderer\src\features\EmployeesList\ui" />
+      <recent name="D:\Programming\projects\EmployeesSchedule\src\renderer\src\features\EmployeesList\ui\EmployeesList" />
       <recent name="C:\Programming\projects\electron-vite\src\renderer\src\entities\Employee\model\slice" />
       <recent name="C:\Programming\projects\electron-vite\build" />
-      <recent name="C:\Programming\projects\electron-vite\src\renderer\src\widgets\Sidebar\ui\Sidebar" />
-      <recent name="C:\Programming\projects\electron-vite\src\renderer\src\widgets\PageError" />
-      <recent name="C:\Programming\projects\electron-vite\src\renderer\src\shared\lib\classNames" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -145,6 +180,9 @@
       <updated>1671608756470</updated>
       <workItem from="1671608757883" duration="39473000" />
       <workItem from="1671773935570" duration="20899000" />
+      <workItem from="1671817071333" duration="705000" />
+      <workItem from="1671885153999" duration="2055000" />
+      <workItem from="1671897072624" duration="32391000" />
     </task>
     <servers />
   </component>

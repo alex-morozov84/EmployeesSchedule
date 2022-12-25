@@ -7,9 +7,13 @@ import {
 } from '@reduxjs/toolkit'
 import { AxiosInstance } from 'axios'
 import { EmployeeSchema } from '@renderer/entities/Employee'
+import { OverworkSchema } from '@renderer/entities/Overwork'
+import { WorkdaySchema } from '@renderer/entities/Workday'
 
 export interface StateSchema {
   employee: EmployeeSchema
+  overwork: OverworkSchema
+  workday: WorkdaySchema
   // [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
   // async reducers
 }
