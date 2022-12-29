@@ -1,3 +1,10 @@
+import { Layout } from '@renderer/shared/ui/Layout'
+import { EmployeeData } from '@renderer/features/EmployeeData'
+
 export const MainPage = () => {
-  return <div>Главная</div>
+  return (
+    <Layout title="Главная">
+      <EmployeeData />
+    </Layout>
+  )
 }

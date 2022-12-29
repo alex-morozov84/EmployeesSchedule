@@ -10,8 +10,8 @@ export const PageError = () => {
 
   return (
     <div className={classNames(cls.PageError)}>
-      <p>'Произошла непредвиденная ошибка'</p>
-      <Button onClick={reloadPage}>'Обновить страницу'</Button>
+      <p>Произошла непредвиденная ошибка</p>
+      <Button onClick={reloadPage}>Обновить страницу</Button>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { WorkdaySchema } from '../types/workday'
 import { buildSlice } from '../../../../shared/store'
 import { fetchWorkday } from '../services/fetchWorkday/fetchWorkday'
 import { setWorkday } from '../services/setWorkday/setWorkday'
+import { createWorkday } from '../services/createWorkday/createWorkday'
 
 const initialState: WorkdaySchema = {
   workday: [],
@@ -40,6 +41,18 @@ export const workdaySlice = buildSlice({
       state.isLoading = false
     })
     builder.addCase(setWorkday.rejected, (state, action) => {
+      state.error = action.payload
+      state.isLoading = false
+    })
+    builder.addCase(createWorkday.pending, (state) => {
+      state.error = undefined
+      state.isLoading = true
+    })
+    builder.addCase(createWorkday.fulfilled, (state, action) => {
+      state.workday = action.payload
+      state.isLoading = false
+    })
+    builder.addCase(createWorkday.rejected, (state, action) => {
       state.error = action.payload
       state.isLoading = false
     })

@@ -1,10 +1,10 @@
 import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit'
 import { StateSchema, ThunkExtraArg } from './StateSchema'
 import { createReducerManager } from './reducerManager'
-import { $axios } from '@renderer/shared/api/axios'
 import { employeeReducer } from '@renderer/entities/Employee'
 import { overworkReducer } from '@renderer/entities/Overwork'
-import { workdayReducer } from '../../../../entities/Workday'
+import { workdayReducer } from '@renderer/entities/Workday'
+import { userReducer } from '@renderer/entities/User'
 
 export function createReduxStore(
   initialState?: StateSchema,
@@ -14,13 +14,14 @@ export function createReduxStore(
     ...asyncReducers,
     employee: employeeReducer,
     overwork: overworkReducer,
-    workday: workdayReducer
+    workday: workdayReducer,
+    user: userReducer
   }
 
   const reducerManager = createReducerManager(rootReducers)
 
   const extraArg: ThunkExtraArg = {
-    api: $axios
+    api: ''
   }
 
   const store = configureStore({

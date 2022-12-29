@@ -1,6 +1,7 @@
 import { Layout } from 'antd'
 import { useCallback, useState } from 'react'
 import { SidebarMenu } from '../Menu/Menu'
+import { Auth } from '@renderer/features/Auth'
 
 export const Sidebar = () => {
   const { Sider } = Layout
@@ -11,8 +12,13 @@ export const Sidebar = () => {
   }, [])
 
   return (
-    <Sider collapsible collapsed={collapsed} onCollapse={collapseHandler}>
+    <Sider
+      collapsible
+      collapsed={collapsed}
+      onCollapse={collapseHandler}
+    >
       <SidebarMenu />
+      {!collapsed && <Auth />}
     </Sider>
   )
 }

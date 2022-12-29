@@ -6,16 +6,7 @@ import { useCallback, useEffect, useMemo } from 'react'
 import { useAppDispatch } from '@renderer/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { fetchOverwork } from '@renderer/entities/Overwork'
 import { setOverwork } from '@renderer/entities/Overwork'
-
-const weekDays = [
-  { monday: 'Понедельник' },
-  { tuesday: 'Вторник' },
-  { wednesday: 'Среда' },
-  { thursday: 'Четверг' },
-  { friday: 'Пятница' },
-  { saturday: 'Суббота' },
-  { sunday: 'Воскресенье' }
-]
+import { weekDays } from '@renderer/shared/const/weekDays'
 
 export const SetOverwork = () => {
   const overworkTime = useOverwork()

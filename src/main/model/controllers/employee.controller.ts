@@ -3,7 +3,8 @@ import {
   addEmployee,
   updateEmployee,
   deleteEmployee,
-  getEmployees
+  getEmployees,
+  checkEmployeeWorkdaysData
 } from '../services/employee.services'
 
 export interface EmployeeDTO {
@@ -17,8 +18,8 @@ export interface UpdateEmployeeDTO {
 }
 
 export const employeeController = () => {
-  ipcMain.handle('getEmployees', async () => {
-    return await getEmployees()
+  ipcMain.handle('getEmployees', async (_, type: 'all' | 'withHours') => {
+    return await getEmployees(type)
   })
 
   ipcMain.handle('postEmployee', async (_, newEmployeeData: EmployeeDTO) => {
@@ -31,5 +32,10 @@ export const employeeController = () => {
 
   ipcMain.handle('updateEmployee', async (_, updateEmployeeData: UpdateEmployeeDTO) => {
     return await updateEmployee(updateEmployeeData)
+  })
+
+  // Проверка есть ли данные для этого пользователя. Для подтверждения удаления
+  ipcMain.handle('checkEmployeeWorkdaysData', async (_, employeeId: number) => {
+    return await checkEmployeeWorkdaysData(employeeId)
   })
 }

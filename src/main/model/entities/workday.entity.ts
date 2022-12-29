@@ -12,7 +12,10 @@ export class Workday {
   @Column()
   attribute: 'onWork' | 'disease' | 'watch' | 'vacation' | 'dayOff'
 
+  @Column({ nullable: true })
+  weekDay: 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday'
+
   // @ManyToOne(() => Employee, (employee) => employee.workdays)
-  @ManyToOne('Employee', 'workdays')
+  @ManyToOne('Employee', 'workdays', { onDelete: 'CASCADE' })
   employee: Employee
 }

@@ -13,7 +13,7 @@ function createWindow() {
     height: 800,
     // fullscreen: true,
     show: false,
-    icon: path.join(__dirname, '../../build/favicon.ico'),
+    icon: path.join(__dirname, '../../build/icon.ico'),
     autoHideMenuBar: true,
     ...(process.platform === 'linux'
       ? {

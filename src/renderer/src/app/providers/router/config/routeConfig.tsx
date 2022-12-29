@@ -4,12 +4,16 @@ import {
   getRouteEmployees,
   getRouteMain,
   getRouteWorkDay,
-  getRoutHours
+  getRouteHours,
+  getRouteMonth,
+  getRouteReport
 } from '@renderer/shared/const/router'
 import { MainPage } from '@renderer/pages/MainPage'
 import { EmployeesPage } from '@renderer/pages/EmployeesPage'
 import { HoursPage } from '@renderer/pages/HoursPage'
 import { WorkDayPage } from '@renderer/pages/WorkDayPage'
+import { MonthPage } from '@renderer/pages/MonthPage'
+import { ReportPage } from '@renderer/pages/ReportPage'
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.MAIN]: {
@@ -21,11 +25,19 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     element: <EmployeesPage />
   },
   [AppRoutes.HOURS]: {
-    path: getRoutHours(),
+    path: getRouteHours(),
     element: <HoursPage />
   },
   [AppRoutes.WORK_DAY]: {
     path: getRouteWorkDay(),
     element: <WorkDayPage />
+  },
+  [AppRoutes.MONTH]: {
+    path: getRouteMonth(),
+    element: <MonthPage />
+  },
+  [AppRoutes.REPORT]: {
+    path: getRouteReport(),
+    element: <ReportPage />
   }
 }

@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  gap: 20px
+  //justify-content: space-between;
+}
+
+.calendarWrapper {
+  width: 300px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+}
+
+.chooseEmployeeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 600;
+}
