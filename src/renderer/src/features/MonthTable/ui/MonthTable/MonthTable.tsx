@@ -23,6 +23,7 @@ interface MonthTableProps {
 interface TableDataType {
   name: string
   key: number
+
   [day: number]: string
 }
 
@@ -89,7 +90,14 @@ export const MonthTable = ({ dateString }: MonthTableProps) => {
 
   const columns: ColumnsType<TableDataType> = useMemo(
     () => [
-      { title: 'ФИО', dataIndex: 'name', key: 'name', ellipsis: true, width: '150px' },
+      {
+        title: 'ФИО',
+        dataIndex: 'name',
+        key: 'name',
+        ellipsis: true,
+        width: '150px',
+        render: (value) => <div style={{ padding: '5px' }}>{value}</div>
+      },
       ...days.map((day) => ({
         title: day,
         dataIndex: day,
@@ -98,20 +106,36 @@ export const MonthTable = ({ dateString }: MonthTableProps) => {
           <>
             <div
               style={{
-                background: attrColorMapper[value],
-                padding: '10px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
+                borderLeft:
+                  dayjsWeekDay[dayjs(`${year}-${month}-${day}`).weekday()] === 'saturday'
+                    ? '5px solid orange'
+                    : undefined,
+                borderRight:
+                  dayjsWeekDay[dayjs(`${year}-${month}-${day}`).weekday()] === 'sunday'
+                    ? '5px solid orange'
+                    : undefined
               }}
             >
-              {checkboxes ? <Checkbox onChange={(e) => onChangeData(day, employee, e)} /> : value}
+              <div
+                style={{
+                  background: attrColorMapper[value],
+                  padding: '10px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  height: '40px',
+                  borderRadius: '7px',
+                  boxShadow: '1px 1px 1px 0px rgba(0, 0, 0, 0.2)'
+                }}
+              >
+                {checkboxes ? <Checkbox onChange={(e) => onChangeData(day, employee, e)} /> : value}
+              </div>
             </div>
           </>
         )
       }))
     ],
-    [checkboxes, days, onChangeData]
+    [checkboxes, days, month, onChangeData, year]
   )
 
   const employeeDays = useCallback(

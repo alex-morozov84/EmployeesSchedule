@@ -9,10 +9,13 @@ import { workdayAttributesTranslate } from '@renderer/shared/const/workdayAttrib
 import { TotalHours } from '@renderer/features/TotalHours'
 import cls from './EmployeeWorkdaysTable.module.scss'
 import { classNames } from '@renderer/shared/lib/classNames/classNames'
+import dayjs from 'dayjs'
 
 interface EmployeeWorkdaysTableProps {
   employee: Employee
   tableRef: React.MutableRefObject<null>
+  dateFrom: string
+  dateTo: string
 }
 
 interface TableDataType {
@@ -23,7 +26,12 @@ interface TableDataType {
   key: string
 }
 
-export const EmployeeWorkdaysTable = ({ employee, tableRef }: EmployeeWorkdaysTableProps) => {
+export const EmployeeWorkdaysTable = ({
+  employee,
+  tableRef,
+  dateFrom,
+  dateTo
+}: EmployeeWorkdaysTableProps) => {
   const dispatch = useAppDispatch()
   const overwork = useOverwork()
 
@@ -32,11 +40,22 @@ export const EmployeeWorkdaysTable = ({ employee, tableRef }: EmployeeWorkdaysTa
     // eslint-disable-next-line
   }, [])
 
-  const employeeWorkdays = [...(employee?.workdays || [])]
+  // Фильтрация по выбранному диапазону дат
+  const employeeWorkdaysRange = [
+    ...(employee.workdays?.filter(
+      (day) =>
+        dayjs(day.date, 'DD.MM.YYYY').diff(dayjs(dateFrom, 'YYYY-MM-DD')) >= 0 &&
+        dayjs(day.date, 'DD.MM.YYYY').diff(dayjs(dateTo, 'YYYY-MM-DD')) <= 0
+    ) || [])
+  ]
+
+  // const employeeWorkdays = [...(employee?.workdays || [])]
 
   // Сортировка по дате. Т.к. дата задана в российском формате, то вначале переворачиваем ее
   const getTimestamp = (str) => +new Date(str.split('.').reverse())
-  const sortedDates = employeeWorkdays.sort((a, b) => getTimestamp(a.date) - getTimestamp(b.date))
+  const sortedDates = employeeWorkdaysRange.sort(
+    (a, b) => getTimestamp(a.date) - getTimestamp(b.date)
+  )
 
   const columns: ColumnsType<TableDataType> = [
     { title: 'Дата', dataIndex: 'date', key: 'date', ellipsis: true },
@@ -65,16 +84,24 @@ export const EmployeeWorkdaysTable = ({ employee, tableRef }: EmployeeWorkdaysTa
 
   return (
     <div className={classNames(cls.wrapper)}>
-      <Table
-        size="small"
-        bordered
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-        // rowKey="uid"
-        ref={tableRef}
+      {data.length > 0 ? (
+        <Table
+          size="small"
+          bordered
+          columns={columns}
+          dataSource={data}
+          pagination={false}
+          ref={tableRef}
+        />
+      ) : (
+        <div className={classNames(cls.noData)}>
+          За выбранный период нет данных о полученных/потраченных часах
+        </div>
+      )}
+      <TotalHours
+        employee={employee}
+        employeeWorkdaysRange={employeeWorkdaysRange}
       />
-      <TotalHours employee={employee} />
     </div>
   )
 }

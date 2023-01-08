@@ -40,12 +40,22 @@ export const WorkdayTable = ({ date, weekDay }: WorkdayTableProps) => {
   const workday = useWorkday()
   const dispatch = useAppDispatch()
   const formattedDate = date.format('DD.MM.YYYY')
+  // Запись в формате, читаемом SQLite
+  const dateForDB = date.format('YYYY-MM-DD')
 
   const onChangeAttribute = (record: TableDataType, e: CheckboxChangeEvent) => {
     const { checked, value: attribute } = e.target
     const employeeId = +record.employeeId
     if (checked) {
-      dispatch(setWorkday({ date: formattedDate, weekDay, employeeId, attribute }))
+      dispatch(
+        setWorkday({
+          date: formattedDate,
+          dateFormat: dateForDB,
+          weekDay,
+          employeeId,
+          attribute
+        })
+      )
     }
   }
 

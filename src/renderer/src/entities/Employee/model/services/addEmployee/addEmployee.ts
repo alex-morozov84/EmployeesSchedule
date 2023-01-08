@@ -2,7 +2,14 @@ import { Employee } from '../../types/employee'
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { ThunkConfig } from '@renderer/app/providers/StoreProvider'
 
-export const addEmployee = createAsyncThunk<Employee, { name: string }, ThunkConfig<string>>(
+export interface AddEmployeeDTO {
+  name: string
+  birthDay: string
+  rank: string
+  position: string
+}
+
+export const addEmployee = createAsyncThunk<Employee, AddEmployeeDTO, ThunkConfig<string>>(
   'addEmployee',
   async (data, thunkAPI) => {
     const { rejectWithValue } = thunkAPI

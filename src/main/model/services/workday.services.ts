@@ -16,7 +16,6 @@ export const getWorkday = async (date: string) => {
 }
 
 export const setWorkday = async (data: WorkdayControllerDTO) => {
-  console.log(data)
   try {
     const employee = await employeeRepository.findOne({
       where: { id: data.employeeId }
@@ -31,10 +30,13 @@ export const setWorkday = async (data: WorkdayControllerDTO) => {
       if (employeeWorkday) {
         employeeWorkday.attribute = data.attribute
         employeeWorkday.weekDay = data.weekDay
+        employeeWorkday.dateFormat = data.dateFormat
+
         await workdayRepository.save(employeeWorkday)
       } else {
         const newEmployeeWorkday = await workdayRepository.create({ employee, ...data })
         await workdayRepository.save(newEmployeeWorkday)
+
         return await workdayRepository.findOne({
           where: { date: data.date, employee },
           relations: { employee: true }

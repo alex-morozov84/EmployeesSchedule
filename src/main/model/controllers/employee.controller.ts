@@ -9,11 +9,17 @@ import {
 
 export interface EmployeeDTO {
   name: string
+  birthDay: string
+  rank: string
+  position: string
 }
 
 export interface UpdateEmployeeDTO {
   id: number
   name?: string
+  birthDay?: string
+  rank?: string
+  position?: string
   timeOffset?: number
 }
 

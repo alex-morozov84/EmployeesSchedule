@@ -34,7 +34,11 @@ export const EmployeesListItem = ({
       className={classNames(cls.item)}
     >
       <div className={classNames(cls.totalHours)}>
-        <div>{employee.name}</div> <TotalHours employee={employee} />
+        <div>{employee.name}</div>{' '}
+        <TotalHours
+          employee={employee}
+          year
+        />
       </div>
     </List.Item>
   )

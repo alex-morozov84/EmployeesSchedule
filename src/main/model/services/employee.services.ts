@@ -59,10 +59,17 @@ export const deleteEmployee = async (id: number) => {
 export const updateEmployee = async (updateEmployeeData: UpdateEmployeeDTO) => {
   const { id, ...restData } = updateEmployeeData
   try {
-    const employee = await employeeRepository.findOne({ where: { id } })
+    const employee = await employeeRepository.findOne({
+      where: { id },
+      relations: { workdays: true }
+    })
     if (employee) {
       await employeeRepository.update(updateEmployeeData.id, restData)
-      return updateEmployeeData
+
+      return await employeeRepository.findOne({
+        where: { id },
+        relations: { workdays: true }
+      })
     } else {
       console.log(`Сотрудник с id ${id} не найден`)
       return

@@ -7,6 +7,7 @@ import { fetchEmployees } from '@renderer/entities/Employee'
 import { ChangeAttributeData } from '../MonthTable/MonthTable'
 import cls from './ChangeAttributes.module.scss'
 import { classNames } from '@renderer/shared/lib/classNames/classNames'
+import dayjs from 'dayjs'
 
 interface ChangeAttributesProps {
   checkboxes: boolean
@@ -54,6 +55,7 @@ export const ChangeAttributes = ({
           setWorkday({
             date: data.date,
             weekDay: data.weekDay,
+            dateFormat: dayjs(data.date, 'DD.MM.YYYY').format('YYYY-MM-DD'),
             attribute,
             employeeId: data.employeeId
           })

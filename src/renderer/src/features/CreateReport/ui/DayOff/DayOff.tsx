@@ -1,5 +1,5 @@
 import { Button } from 'antd'
-import { Dayjs } from 'dayjs'
+import dayjs, { Dayjs } from 'dayjs'
 import { Employee } from '@renderer/entities/Employee'
 import Docxtemplater from 'docxtemplater'
 import PizZip from 'pizzip'
@@ -11,19 +11,13 @@ interface DayOffProps {
   date: Dayjs
 }
 
-interface DayOffReport {
-  date: string
-  fulldate: string
-  position: string
-  rank: string
-  name: string
-}
-
 export const DayOff = ({ employee, date }: DayOffProps) => {
+  const currentDate = dayjs().format('DD.MM.YYYY')
+  const dayOffDate = date.format('DD.MM.YYYY')
+
   const onCreateReport = useCallback(async () => {
     const { ipcRenderer } = window.electron
     const response = await ipcRenderer.invoke('getFileTemplate', 'dayOff')
-    console.log(response)
 
     const zip = new PizZip(response)
     const doc = new Docxtemplater(zip, {
@@ -32,7 +26,11 @@ export const DayOff = ({ employee, date }: DayOffProps) => {
     })
 
     doc.setData({
-      name: employee.name
+      name: employee.name,
+      rank: employee.rank,
+      position: employee.position,
+      date: dayOffDate,
+      currentDate
     })
 
     try {
@@ -45,8 +43,8 @@ export const DayOff = ({ employee, date }: DayOffProps) => {
       type: 'blob',
       mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
     })
-    saveAs(out, 'output.docx')
-  }, [employee.name])
+    saveAs(out, `Отгул_${dayOffDate}.docx`)
+  }, [currentDate, dayOffDate, employee.name, employee.position, employee.rank])
 
   return (
     <Button

@@ -3,6 +3,7 @@ import { createWorkday, getWorkday, setWorkday } from '../services/workday.servi
 
 export interface WorkdayControllerDTO {
   date: string
+  dateFormat: string
   weekDay: 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday'
   employeeId: number
   attribute: 'onWork' | 'disease' | 'watch' | 'vacation' | 'dayOff'

@@ -24,7 +24,7 @@ export const ChooseReportData = ({ setEmployee, setDate }: ChooseReportData) => 
           />
         </div>
         <div className={classNames(cls.chooseEmployeeWrapper)}>
-          <div className={classNames(cls.text)}>Выберите дату:</div>
+          <div className={classNames(cls.text)}>Выберите дату отгула:</div>
           <div className={classNames(cls.calendarWrapper)}>
             <Calendar
               fullscreen={false}

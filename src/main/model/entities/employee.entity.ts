@@ -10,6 +10,15 @@ export class Employee {
   name: string
 
   @Column({ nullable: true })
+  birthDay: string
+
+  @Column({ nullable: true })
+  rank: string
+
+  @Column({ nullable: true })
+  position: string
+
+  @Column({ nullable: true })
   timeOffset: number
 
   // @OneToMany(() => Workday, (workday) => workday.employee)

@@ -4,6 +4,7 @@ import { Workday, WorkdayAttribute } from '../../types/workday'
 
 interface SetWorkdayDTO {
   date: string
+  dateFormat: string
   weekDay: 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday'
   attribute: WorkdayAttribute
   employeeId: number

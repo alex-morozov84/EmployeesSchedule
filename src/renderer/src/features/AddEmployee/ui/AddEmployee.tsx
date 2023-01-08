@@ -1,48 +1,84 @@
-import { Button, Input, Space } from 'antd'
-import React, { useCallback, useState } from 'react'
+import { Button, DatePicker, Form, Input } from 'antd'
+import { useCallback } from 'react'
 import { addEmployee } from '@renderer/entities/Employee'
 import { useAppDispatch } from '@renderer/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Widget } from '@renderer/shared/ui/Widget'
+import cls from './AddEmployee.module.scss'
+import { classNames } from '../../../shared/lib/classNames/classNames'
+import { Dayjs } from 'dayjs'
+import { useForm } from 'antd/es/form/Form'
+
+interface NewEmployeeFormData {
+  name: string
+  rank: string
+  position: string
+  birthDay: Dayjs
+}
 
 export const AddEmployee = () => {
   const dispatch = useAppDispatch()
-  const [inputValue, setInputValue] = useState('')
-  const [validationError, setValidationError] = useState('')
+  const [form] = useForm()
 
-  const addNewEmployee = useCallback(async () => {
-    if (inputValue) {
-      dispatch(addEmployee({ name: inputValue }))
-      setInputValue('')
-    } else {
-      setValidationError('Не указаны ФИО сотрудника!')
-    }
-  }, [dispatch, inputValue])
+  const addNewEmployee = useCallback(
+    (fieldsValue: NewEmployeeFormData) => {
+      const newEmployeeData = {
+        ...fieldsValue,
+        birthDay: fieldsValue.birthDay.format('DD.MM.YYYY')
+      }
 
-  const inputChangeHandler = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    setValidationError('')
-    setInputValue(e.target.value)
-  }, [])
+      dispatch(addEmployee(newEmployeeData))
+
+      form.resetFields()
+    },
+    [dispatch, form]
+  )
 
   return (
     <Widget title={'Добавить сотрудника'}>
-      <Space
-        direction="vertical"
-        style={{ display: 'flex' }}
+      <Form
+        form={form}
+        size="small"
+        name="addEmployee"
+        onFinish={addNewEmployee}
+        className={classNames(cls.form)}
       >
-        <Input
-          placeholder={validationError || 'Введите ФИО сотрудника'}
-          value={inputValue}
-          onChange={inputChangeHandler}
-          status={validationError ? 'error' : ''}
-          style={{ maxWidth: '400px' }}
-        />
-        <Button
-          type="primary"
-          onClick={addNewEmployee}
+        <Form.Item
+          label="ФИО"
+          name="name"
+          rules={[{ required: true, message: 'Введите ФИО сотрудника!' }]}
         >
-          Добавить
-        </Button>
-      </Space>
+          <Input />
+        </Form.Item>
+        <Form.Item
+          label="Звание"
+          name="rank"
+          rules={[{ required: true, message: 'Введите звание сотрудника!' }]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          label="Должность"
+          name="position"
+          rules={[{ required: true, message: 'Введите должность сотрудника!' }]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          name="birthDay"
+          label="Дата рождения"
+          rules={[{ required: true, message: 'Выберите дату рождения сотрудника!' }]}
+        >
+          <DatePicker />
+        </Form.Item>
+        <Form.Item>
+          <Button
+            type="primary"
+            htmlType="submit"
+          >
+            Добавить
+          </Button>
+        </Form.Item>
+      </Form>
     </Widget>
   )
 }

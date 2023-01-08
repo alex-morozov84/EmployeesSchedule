@@ -9,6 +9,9 @@ export class Workday {
   @Column()
   date: string
 
+  @Column({ nullable: true })
+  dateFormat: string
+
   @Column()
   attribute: 'onWork' | 'disease' | 'watch' | 'vacation' | 'dayOff'
 

@@ -9,9 +9,8 @@ setControllers()
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1400,
-    height: 800,
-    // fullscreen: true,
+    // width: 1400,
+    // height: 800,
     show: false,
     icon: path.join(__dirname, '../../build/icon.ico'),
     autoHideMenuBar: true,
@@ -28,6 +27,7 @@ function createWindow() {
   })
 
   mainWindow.on('ready-to-show', () => {
+    mainWindow.maximize()
     mainWindow.show()
   })
 

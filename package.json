@@ -1,6 +1,6 @@
 {
   "name": "employees-schedule",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Employee work and holiday schedule",
   "main": "./out/main/index.js",
   "author": "Alexander Morozov (mail@alex-morozov.ru)",

@@ -1,9 +1,11 @@
-import { ipcMain } from 'electron'
+import { app, ipcMain } from 'electron'
 import fs from 'fs'
+import path from 'path'
 
 const TemplatePaths = {
-  dayOff: './day-off-template.docx',
-  another: './another.docx'
+  // dayOff: './day-off-template.docx',
+  dayOff: path.join(app.getPath('home'), 'employee', 'day-off-template.docx'),
+  another: path.join(app.getPath('home'), 'employee', 'another.docx')
 } as const
 
 type TemplateType = keyof typeof TemplatePaths
