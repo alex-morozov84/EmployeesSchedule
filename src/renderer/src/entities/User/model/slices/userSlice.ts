@@ -12,7 +12,11 @@ export const userSlice = buildSlice({
   initialState,
   reducers: {
     logout: (state) => {
+      localStorage.removeItem('user')
       state.userData = {} as User
+    },
+    reauth: (state, action) => {
+      state.userData = action.payload
     }
   },
   extraReducers: (builder) => {

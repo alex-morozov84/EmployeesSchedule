@@ -10,7 +10,7 @@ export const dataSource = new DataSource({
   type: 'sqlite',
   // database: './employees_schedule.sql',
   // database: path.join(app.getPath('home'), 'employee', 'employees_schedule.sql'),
-  database: path.join(process.env.PORTABLE_EXECUTABLE_DIR || '', 'data', 'employees_schedule.sql'),
+  database: process.env.NODE_ENV === 'development' ? './employees_schedule.sql' : path.join(process.env.PORTABLE_EXECUTABLE_DIR || '', 'data', 'employees_schedule.sql'),
   synchronize: true,
   entities: [Employee, Overwork, Workday, User]
 })

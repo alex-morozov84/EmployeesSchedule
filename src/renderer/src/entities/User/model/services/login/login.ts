@@ -15,7 +15,8 @@ export const login = createAsyncThunk<
     if (!response) {
       return
     }
-
+    console.log(response)
+    localStorage.setItem('user', JSON.stringify(response))
     return response
   } catch (e) {
     console.log(e)
