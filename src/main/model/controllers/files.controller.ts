@@ -4,7 +4,8 @@ import path from 'path'
 
 const TemplatePaths = {
   // dayOff: './day-off-template.docx',
-  dayOff: path.join(app.getPath('home'), 'employee', 'day-off-template.docx'),
+  dayOff: path.join(process.env.PORTABLE_EXECUTABLE_DIR || '', 'data', 'day-off-template.docx'),
+  // dayOff: path.join(app.getPath('home'), 'employee', 'day-off-template.docx'),
   another: path.join(app.getPath('home'), 'employee', 'another.docx')
 } as const
 
