@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d4187502-7018-44c5-98ed-172b600af810" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employees_schedule.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employees_schedule.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/config/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/config/db.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/User/model/services/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/User/model/services/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/src/entities/User/model/slices/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/src/entities/User/model/slices/userSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +31,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Programming/projects/EmployeesSchedule/node_modules/prettier",
+    "last_opened_file_path": "C:/Programming/projects/EmployeesSchedule",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,6 +73,7 @@
       <workItem from="1672695621884" duration="201000" />
       <workItem from="1672695835576" duration="415000" />
       <workItem from="1673157707202" duration="24510000" />
+      <workItem from="1674470873764" duration="1094000" />
     </task>
     <servers />
   </component>

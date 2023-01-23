@@ -1,10 +1,7 @@
-# electron-vite
+# Employees Schedule
 
-An Electron application with React and TypeScript
-
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+An Electron application for employees time tracking.
+Stack: Electron, Vite, React, TypeScript, Redux Toolkit, TypeOrm, SQLite
 
 ## Project Setup
 
@@ -26,9 +23,20 @@ $ npm run dev
 # For windows
 $ npm run build:win
 
+# For window portable
+$ npm run build:win:portable
+
 # For macOS
 $ npm run build:mac
 
 # For Linux
 $ npm run build:linux
 ```
+
+### Database
+
+Database situated in SQLite file *employees_schedule.sql*. After build this file must be located in the app directory, near the *.exe* file.
+
+### Admin
+
+For test all available features created test admin user. Login: alex, password: 12345.
