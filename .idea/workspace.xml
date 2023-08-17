@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4187502-7018-44c5-98ed-172b600af810" name="Changes" comment="">
+    <list default="true" id="bf5e2efc-7845-4762-a3be-8adcb537dad5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +19,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JDNaThEinukZa67t4W1hV6jS5q" />
+  <component name="ProjectId" id="2RVuCR2QAXgabfWuyYP3ClQ7phf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="compactDirectories" value="true" />
@@ -28,52 +28,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Programming/projects/EmployeesSchedule",
+    "last_opened_file_path": "C:/Programming/projects/stoll-r",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "prettier.import.notification.dismissed": "true",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Programming\\projects\\EmployeesSchedule\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Programming\\projects\\EmployeesSchedule\\node_modules\\typescript\\lib",
+    "settings.editor.selected.configurable": "MTConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programming\projects\EmployeesSchedule\build" />
-      <recent name="C:\Programming\projects\electron-vite\build" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programming\projects\EmployeesSchedule\src\renderer\src\entities\Overwork\model\services\fetchOverwork" />
-      <recent name="D:\Programming\projects\EmployeesSchedule\src\renderer\src\features\EmployeesList\ui" />
-      <recent name="D:\Programming\projects\EmployeesSchedule\src\renderer\src\features\EmployeesList\ui\EmployeesList" />
-      <recent name="C:\Programming\projects\electron-vite\src\renderer\src\entities\Employee\model\slice" />
-      <recent name="C:\Programming\projects\electron-vite\build" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d4187502-7018-44c5-98ed-172b600af810" name="Changes" comment="" />
-      <created>1671608756470</created>
+      <changelist id="bf5e2efc-7845-4762-a3be-8adcb537dad5" name="Changes" comment="" />
+      <created>1687347448705</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1671608756470</updated>
-      <workItem from="1671608757883" duration="39473000" />
-      <workItem from="1671773935570" duration="20899000" />
-      <workItem from="1671817071333" duration="705000" />
-      <workItem from="1671885153999" duration="2055000" />
-      <workItem from="1671897072624" duration="33180000" />
-      <workItem from="1672695621884" duration="201000" />
-      <workItem from="1672695835576" duration="415000" />
-      <workItem from="1673157707202" duration="24510000" />
-      <workItem from="1674470873764" duration="1094000" />
+      <updated>1687347448705</updated>
+      <workItem from="1687347453736" duration="21000" />
+      <workItem from="1687347553780" duration="1047000" />
     </task>
     <servers />
   </component>
